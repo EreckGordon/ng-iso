@@ -1,0 +1,61 @@
+{
+    "external": {
+        "urls": [
+            {"url": "https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto|Roboto+Mono"}
+        ]
+    },
+    "static.ignore": [
+        "\\.js\\.map$"
+    ],
+    "static.versioned": [
+        "\\.[0-9a-z]{20}\\."
+    ],
+    "dynamic": {
+        "group": [
+            {
+                "name": "firebase",
+                "urls": {
+                    "https://firebasestorage.googleapis.com/v0/b/pre-render-starter.appspot.com": {
+                        "match": "prefix"
+                    }
+                },
+                "cache": {
+                    "optimizeFor":"performance",
+                    "maxAgeMs": 360000000,
+                    "maxEntries": 40,
+                    "strategy": "lru"
+                }
+            },
+            {
+                "name": "offline",
+                "urls": {
+                    "https://pre-render-starter.firebaseio.com/posts.json": { "match": "prefix"}
+                },
+                "cache": {
+                    "optimizeFor": "freshness",
+                    "maxAgeMs": 360000000,
+                    "maxEntries": 1,
+                    "strategy": "lru"
+                }
+            }
+        ]
+
+    },
+    "routing": {
+        "index": "/index.html",
+        "routes": {
+            "/": {
+                "prefix": false
+            },
+            "/blog": {
+                "prefix": true
+            },
+            "/bio": {
+                "prefix": false
+            },
+            "/contact": {
+                "prefix": false
+            }
+        }
+    }
+}
