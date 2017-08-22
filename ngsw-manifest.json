@@ -1,7 +1,8 @@
 {
     "external": {
         "urls": [
-            {"url": "https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto|Roboto+Mono"}
+            {"url": "https://fonts.googleapis.com/css?family=Roboto"},
+            {"url": "https://fonts.googleapis.com/icon?family=Material+Icons"}
         ]
     },
     "static.ignore": [
