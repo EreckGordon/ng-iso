@@ -6,6 +6,16 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [
+      { 
+        "source":"/worker-basic.min.js", 
+        "headers": [
+          {"key": "Cache-Control", 
+          "value": "no-cache"
+          }
+        ] 
+      }      
+    ],
     "rewrites": [
       {
         "source": "**",
