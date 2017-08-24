@@ -4,13 +4,21 @@
   <meta charset="utf-8">
   <title>NgIso</title>
   <base href="/">
-
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#f27b00">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f27b00">  
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Roboto', 'Material+Icons']
+      }
+    });
+  </script>
 </head>
 <body>
   <app-root></app-root>
