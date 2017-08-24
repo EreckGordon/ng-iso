@@ -1,17 +1,11 @@
 {
-    "dir": "ltr",
-    "lang": "en",
     "name": "Angular Universal CLI Starter",
-    "scope": "/",
     "display": "standalone",
-    "start_url": "./?utm_source=web_app_manifest",
+    "start_url": "./?utm_source=homescreen",
     "short_name": "ng-iso",
     "theme_color": "#f27b00",
-    "description": "",
-    "orientation": "any",
+    "orientation": "portrait",
     "background_color": "#3a1c8d",
-    "related_applications": [],
-    "prefer_related_applications": false,
     "icons": [{
           "src": "/assets/logo-512x512.png",
           "sizes": "512x512"
