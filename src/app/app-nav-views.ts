@@ -1,12 +1,12 @@
 export const views: Object[] = [
   {
     name: 'About',
-    icon: 'add_shopping_cart',
+    icon: 'important_devices',
     link: ['about']
   },
   {
     name: 'Blog',
-    icon: 'shopping_cart',
+    icon: 'trending_up',
     link: ['blog']
   },
 ];
