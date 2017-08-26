@@ -16,10 +16,10 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 enableProdMode();
 const AppServerModuleNgFactory = require('./dist-server/main.bundle').AppServerModuleNgFactory;
 
-import { App } from './src/server-api/app';
+import { API } from './api';
 
 const app = express();
-const api = new App();
+const api = new API();
 
 const baseUrl = `http://localhost:8000`;
 const bodyParser = require('body-parser');
@@ -69,7 +69,7 @@ routes.forEach(route => {
 
 app.post('/api/data', (req, res, next) => {
   console.time(`GET: ${req.originalUrl}`);
-  api.getData(req.body).then(value => res.json(value));
+  api.helloWorld(req.body).then(value => res.json(value));
   console.timeEnd(`GET: ${req.originalUrl}`);
 });
 

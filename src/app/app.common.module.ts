@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CustomMaterialModule } from './shared/custom-material-module/index';
 
@@ -20,7 +21,8 @@ import { BlogModule } from './blog/index';
     BrowserModule.withServerTransition({appId: 'ng-iso'}),
     RouterModule.forRoot(routes, { useHash: false, initialNavigation: 'enabled' }),
     CustomMaterialModule,
-    BlogModule 
+    BlogModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [],
