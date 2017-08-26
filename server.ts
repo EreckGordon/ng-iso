@@ -12,18 +12,18 @@ const compression = require('compression');
 
 import { platformServer, renderModuleFactory } from '@angular/platform-server';
 import { enableProdMode } from '@angular/core';
-
 import { ngExpressEngine } from '@nguniversal/express-engine';
-
 enableProdMode();
-
 const AppServerModuleNgFactory = require('./dist-server/main.bundle').AppServerModuleNgFactory;
 
+import { App } from './src/server-api/app';
 
 const app = express();
+const api = new App();
+
 const baseUrl = `http://localhost:8000`;
 const bodyParser = require('body-parser');
-
+import * as cors from 'cors';
 
 app.engine('html', ngExpressEngine({
   bootstrap: AppServerModuleNgFactory
@@ -32,6 +32,16 @@ app.engine('html', ngExpressEngine({
 app.set('view engine', 'html');
 app.set('views', 'src');
 
+const options:cors.CorsOptions = {
+  allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token", "Authorization"],
+  credentials: true,
+  methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
+  origin: ['http://localhost:4200', 'http://localhost:8000'],
+  preflightContinue: false,
+  optionsSuccessStatus: 200
+};
+app.use(cors(options));
+app.options("*", cors(options));
 
 app.use(compression());
 app.use('/', express.static('dist', { index: false }));
@@ -57,6 +67,11 @@ routes.forEach(route => {
   });
 });
 
+app.post('/api/data', (req, res, next) => {
+  console.time(`GET: ${req.originalUrl}`);
+  api.getData(req.body).then(value => res.json(value));
+  console.timeEnd(`GET: ${req.originalUrl}`);
+});
 
 app.listen(8000, () => {
   console.log(`Listening at ${baseUrl}`);

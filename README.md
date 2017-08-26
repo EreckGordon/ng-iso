@@ -2,27 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
 
-## Development server
+- This build assumes you have another folder called ng-iso-deploy on the same level that you have ng-iso.
+	- ng-iso-deploy contains:a git repo, .gitignore, and .gitattributes. It is the deployment folder that you pull from to update the server.
+	- The various build scripts add server.js and the entire frontend dist folder to the ng-iso-deploy folder.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- It also is written for a windows machine, simple commands like copying (robocopy) and delete (del).
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Useful Commands
+`ng serve` - Run in frontend development mode on port 4200.
+`npm run serverLocal` - Run server on local machine (serves frontend and backend on port 8000).
+`npm run deploy` - Push server & frontend assets to github.
+`yarn upgrade-interactive` - Upgrade only what you want to.

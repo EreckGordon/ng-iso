@@ -6,6 +6,7 @@
 /out-tsc
 /dist-server
 server.js
+/src/server-api/app.js
 
 # dependencies
 /node_modules

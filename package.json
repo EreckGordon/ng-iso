@@ -13,9 +13,11 @@
     "prep": "ng build --prod --build-optimizer && ng build --prod --app 1 --output-hashing none --build-optimizer && tsc server & npm run localWebpackForServer",
     "predeploy": "robocopy \"C:\\Users\\Ereck\\Desktop\\ng-iso\\dist\" \"C:\\Users\\Ereck\\Desktop\\ng-iso-deploy\\dist\" /mir /xd .git /xf .gitattributes /xf .gitignore || ECHO.",
     "push-dist-to-github": "cd .. && cd ng-iso-deploy && git add . && git commit -m \"auto generated commit\" && git push origin master",
-    "cleanup": "del server.js",
+    "cleanup-server": "del server.js",
+    "cleanup-api": "del .\\src\\server-api\\app.js",
+    "cleanup": "npm run cleanup-server && npm run cleanup-api",
     "deploy": "npm run prep && npm run predeploy && npm run push-dist-to-github && npm run cleanup",
-    "runServerLocal": "npm run prep && cd .. && cd ng-iso-deploy && node server.js"
+    "serverLocal": "npm run prep && npm run cleanup && cd .. && cd ng-iso-deploy && node server.js"
   },
   "private": true,
   "dependencies": {
