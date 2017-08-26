@@ -12,7 +12,6 @@ Angular Universal PWA Starter build with Angular Cli on Expressjs.
 - webpack.config.js change the output path from `'../ng-iso-deploy'` to `your-project-name-deploy`
 - package.json
 	- script `copy-frontend-to-deploy-folder` & `push-dist-to-github` & `serverLocal` change any mentions of `ng-iso` to your project name.
-	- script `push-dist-to-github` change path 
 
 ## Useful Commands
 - `ng serve` - Run in frontend development mode on port 4200.
