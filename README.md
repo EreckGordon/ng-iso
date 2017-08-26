@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - It also is written for a windows machine, simple commands like copying (robocopy) and delete (del).
 
 ## Useful Commands
-`ng serve` - Run in frontend development mode on port 4200.
-`npm run serverLocal` - Run server on local machine (serves frontend and backend on port 8000).
-`npm run deploy` - Push server & frontend assets to github.
-`yarn upgrade-interactive` - Upgrade only what you want to.
+- `ng serve` - Run in frontend development mode on port 4200.
+- `npm run serverLocal` - Run server on local machine (serves frontend and backend on port 8000).
+- `npm run deploy` - Push server & frontend assets to github.
+- `yarn upgrade-interactive` - Upgrade only what you want to.
