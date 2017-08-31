@@ -7,7 +7,6 @@ import 'rxjs/add/operator/take';
   selector: 'my-home',
   templateUrl: './home.component.html'
 })
-
 export class HomeComponent implements OnInit {
   
     constructor(private http: HttpClient) {}

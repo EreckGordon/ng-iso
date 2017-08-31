@@ -1,5 +1,17 @@
-this is the app component. header will go here.
+<div style="display:flex; min-height: 100vh; flex-direction: column;">
+	<div>
+		<md-toolbar>
 
-<router-outlet></router-outlet>
+		</md-toolbar>
+	</div>
 
-footer will go here.
+	<div style="flex: 1; margin: 1em">
+		<router-outlet></router-outlet>
+	</div>
+
+	<div>
+		<md-toolbar>
+
+		</md-toolbar>
+	</div>
+</div>

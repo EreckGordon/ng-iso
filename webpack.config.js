@@ -2,11 +2,19 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './server.js',
+  entry: './server.ts',
   output: {
     path: path.resolve(__dirname, '../ng-iso-deploy'),
     filename: 'server.js'
   },
+  resolve: {
+  	extensions: ['.ts', '.js']
+  },
+  module: {
+  	loaders: [
+  	  { test: /\.ts$/, loader: 'ts-loader' }
+  	]
+  },  
   target: 'node',
   plugins: [
   	new webpack.optimize.UglifyJsPlugin()
