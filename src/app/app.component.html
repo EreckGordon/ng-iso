@@ -1,9 +1,16 @@
 <div style="display:flex; min-height: 100vh; flex-direction: column;">
-	<div>
-		<md-toolbar>
 
-		</md-toolbar>
-	</div>
+	<nav md-tab-nav-bar>
+	  <a mdTabLink
+	     *ngFor="let view of views"
+	     [routerLink]="view.link"
+	     routerLinkActive #rla="routerLinkActive"
+	     [active]="rla.isActive"
+	     [routerLinkActiveOptions]="{exact:true}">
+	     {{view.name}}<md-icon style="padding-left: .3em">{{view.icon}}</md-icon>
+	  </a>
+
+	</nav>	
 
 	<div style="flex: 1; margin: 1em">
 		<router-outlet></router-outlet>
