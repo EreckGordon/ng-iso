@@ -18,7 +18,6 @@ import {
   MdTabsModule,
   MdToolbarModule,
   MdTooltipModule,
-  OverlayModule,
   PortalModule,
   BidiModule,
   StyleModule,
@@ -26,6 +25,8 @@ import {
   PlatformModule,
   MdCommonModule
 } from '@angular/material';
+
+import { OverlayModule } from '@angular/cdk/overlay';
 
 const MaterialModules = [
   MdButtonModule,
