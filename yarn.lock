@@ -190,13 +190,13 @@
     magic-string "^0.22.3"
     source-map "^0.5.6"
 
-"@nguniversal/express-engine@^1.0.0-beta.2":
-  version "1.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-1.0.0-beta.2.tgz#868f32ef7fbb1a168063f2b312fff8f7bfb60ed0"
+"@nguniversal/express-engine@^1.0.0-beta.3":
+  version "1.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-1.0.0-beta.3.tgz#b06dd5ece6c6882db5e29ec4ed91f65792c63a4e"
 
-"@types/angular@^1.6.31":
-  version "1.6.31"
-  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.31.tgz#480b8ae62197d7a21046305add9f6dc25ac6e7e2"
+"@types/angular@^1.6.32":
+  version "1.6.32"
+  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.32.tgz#fc791aad038227d9413eb5e552993e1076f8a509"
 
 "@types/body-parser@^1.16.5":
   version "1.16.5"
@@ -244,9 +244,9 @@
   version "2.5.54"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.54.tgz#a6b5f2ae2afb6e0307774e8c7c608e037d491c63"
 
-"@types/jasminewd2@~2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@types/jasminewd2/-/jasminewd2-2.0.2.tgz#5f68e1e697bf10bc6fd8cbf2e006a3d6712c5b64"
+"@types/jasminewd2@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@types/jasminewd2/-/jasminewd2-2.0.3.tgz#0d2886b0cbdae4c0eeba55e30792f584bf040a95"
   dependencies:
     "@types/jasmine" "*"
 
@@ -1170,9 +1170,13 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
-core-js@^2.2.0, core-js@^2.4.0, core-js@^2.4.1:
+core-js@^2.2.0, core-js@^2.4.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.0.tgz#569c050918be6486b3837552028ae0466b717086"
+
+core-js@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.1.tgz#ae6874dc66937789b80754ff5428df66819ca50b"
 
 core-object@^3.1.0:
   version "3.1.4"
