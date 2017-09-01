@@ -20,5 +20,6 @@ Angular Universal PWA Starter build with Angular Cli on Expressjs.
 - `npm run serverLocal` - Full build of frontend and backend, then serves frontend and backend on port 8000.
 - `npm run serverRebuild` - Rebuild and run server on port 8000, assumes no frontend changes.
 - `npm run deploy` - Push server & frontend assets to github deployment repo.
-- `npm run analyze` - analyze your prod bundle to see code girth.
+- `npm run analyze` - bundle analysis of non-tree shaken bundle. lets you see the individual angular module pieces.
+- `npm run analyze-deploy` - bundle analysis of tree shaken bundle. kind of opaque, but truest to reality.
 - `yarn upgrade-interactive` - Upgrade only what you want to.
