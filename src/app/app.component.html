@@ -1,15 +1,20 @@
 <div style="display:flex; min-height: 100vh; flex-direction: column;">
 
 	<nav md-tab-nav-bar>
-	  <a mdTabLink
-	     *ngFor="let view of views"
-	     [routerLink]="view.link"
-	     routerLinkActive #rla="routerLinkActive"
-	     [active]="rla.isActive"
-	     [routerLinkActiveOptions]="{exact:true}">
-	     {{view.name}}<md-icon style="padding-left: .3em">{{view.icon}}</md-icon>
-	  </a>
-
+		<a mdTabLink
+			 *ngFor="let view of views"
+			 [routerLink]="view.link"
+			 routerLinkActive #rla="routerLinkActive"
+			 [active]="rla.isActive"
+			 [routerLinkActiveOptions]="{exact:true}">
+			 {{view.name}}<md-icon style="padding-left: .3em">{{view.icon}}</md-icon>
+		</a>
+		<a mdTabLink
+			 routerLink="/blog"
+			 routerLinkActive #rla="routerLinkActive"
+			 [active]="rla.isActive">
+			 Blog<md-icon style="padding-left: .3em">trending_up</md-icon>
+		</a>
 	</nav>	
 
 	<div style="flex: 1; margin: 1em">
