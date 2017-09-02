@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './server.ts',
+  entry: './server/server.ts',
   output: {
     path: path.resolve(__dirname, '../ng-iso-deploy'),
     filename: 'server.js'

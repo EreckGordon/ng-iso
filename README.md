@@ -1,5 +1,5 @@
 # NgIso
-Angular Universal PWA Starter build with Angular Cli on Expressjs.
+Angular Universal PWA Starter built with Angular Cli on Expressjs.
 
 ## Assumptions
 - angular cli (project generated with version 1.3.1)

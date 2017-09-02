@@ -14,7 +14,7 @@ import { platformServer, renderModuleFactory } from '@angular/platform-server';
 import { enableProdMode } from '@angular/core';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 enableProdMode();
-const AppServerModuleNgFactory = require('./dist-server/main.bundle').AppServerModuleNgFactory;
+const AppServerModuleNgFactory = require('../dist-server/main.bundle').AppServerModuleNgFactory;
 
 import { API } from './api';
 
