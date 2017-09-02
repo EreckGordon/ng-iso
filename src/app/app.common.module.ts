@@ -6,10 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomMaterialModule } from './shared/custom-material-module/index';
 
 import { routes } from './app.routing';
-import { NotFound404Component } from './not-found404.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { BlogModule } from './blog/index';
+import { NotFound404Component } from './features/not-found404.component';
+import { HomeComponent } from './features/home/home.component';
+import { AboutComponent } from './features/about/about.component';
+import { BlogModule } from './features/blog/index';
 
 @NgModule({
   declarations: [
