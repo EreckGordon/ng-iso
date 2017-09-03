@@ -24,3 +24,32 @@ Angular Universal PWA Starter built with Angular Cli on Expressjs.
 - `npm run analyze` - bundle analysis of non-tree shaken bundle. lets you see the individual angular module pieces.
 - `npm run analyze-deploy` - bundle analysis of tree shaken bundle. kind of opaque, but truest to reality.
 - `yarn upgrade-interactive` - Upgrade only what you want to.
+
+## Meta Tags
+
+```
+import { Component } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+
+@Component({
+  selector: 'my-some-component',
+  template: '<h3>Some Component</h3>'
+})
+
+export class SomeComponent {
+    constructor(meta: Meta, title: Title) {
+	    title.setTitle('ng-iso - Isomorphic Angular');
+
+	    const author = {name: 'author', content: 'Ereck Gordon'};
+	    const keywords = {name: 'keywords', content: 'angular, universal, angular-cli, PWA, expressjs'};
+	    const description = { name: 'description', content: 'This is a page. It is neat.' };
+
+	    const tagsToCheck:any[] = [author, keywords, description]
+	    const unfilteredTags = meta.getTags('name');
+	    tagsToCheck.forEach(tag => {	    	
+	    	const filteredTag = unfilteredTags.filter(unfilteredTag => unfilteredTag.name === tag.name);
+	    	filteredTag.length > 0 ? meta.updateTag({name: filteredTag[0].name, content: tag.content }) : meta.addTag(tag);
+	    });
+    }	
+}
+```
