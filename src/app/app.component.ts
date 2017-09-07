@@ -39,7 +39,6 @@ export class AppComponent {
 			this.worker.updates.subscribe(res => {
 				res.type === 'activation' ? this.reloadPrompt() : null;
 			});
-
 		}
 	}
 
@@ -61,7 +60,7 @@ export class AppComponent {
 
 	private reloadPrompt(){
 		this.snackBar.open('Updated Content Available, Press OK to Reload','OK')
-			.afterDismissed().take(1).subscribe(() => window.location.reload(true));		
+			.afterDismissed().take(1).subscribe(() => window.location.reload());		
 	}
 
 }
