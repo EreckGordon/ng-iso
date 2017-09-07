@@ -53,3 +53,15 @@ export class SomeComponent {
     }	
 }
 ```
+
+creating deployment on digital ocean server:
+
+- sudo git remote add origin https://github.com/EreckGordon/ng-iso-deploy
+- sudo git pull origin master
+
+updating deployment:
+`ssh root@ipv4 address`
+`su - web`
+`cd /var/www/`
+`sudo git pull origin master`
+`pm2 restart server`

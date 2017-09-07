@@ -67,7 +67,7 @@ routes.forEach(route => {
   });
 });
 
-app.post('/api/data', (req, res, next) => {
+app.post('/api/data', cors(options), (req, res, next) => {
   console.time(`GET: ${req.originalUrl}`);
   api.helloWorld(req.body).then(value => res.json(value));
   console.timeEnd(`GET: ${req.originalUrl}`);
