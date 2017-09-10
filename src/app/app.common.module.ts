@@ -19,10 +19,10 @@ import { BlogModule } from './features/blog/index';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'ng-iso'}),
-    RouterModule.forRoot(routes, { useHash: false, initialNavigation: 'enabled' }),
     CustomMaterialModule,
     BlogModule,
-    HttpClientModule 
+    HttpClientModule,
+    RouterModule.forRoot(routes, { useHash: false, initialNavigation: 'enabled' }), 
   ],
   providers: [],
   bootstrap: [],

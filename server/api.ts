@@ -1,4 +1,3 @@
-require('util.promisify/shim')();
 const util = require('util');
 
 export class API {

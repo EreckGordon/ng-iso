@@ -16,7 +16,7 @@
     "deploy": "npm run prep && npm run copy-frontend-to-deploy-folder && npm run push-dist-to-github",
     "serverLocal": "npm run prep && npm run copy-frontend-to-deploy-folder && cd .. && cd ng-iso-deploy && node server.js",
     "analyze-deploy": "ng build --prod --stats-json --build-optimizer && webpack-bundle-analyzer dist/stats.json",
-    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
+    "analyze": "ng build --aot --stats-json && webpack-bundle-analyzer dist/stats.json",
     "serverRebuild": "npm run localWebpackForServer && cd .. && cd ng-iso-deploy && node server.js"
   },
   "private": true,
