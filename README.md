@@ -25,34 +25,15 @@ Angular Universal PWA Starter built with Angular Cli on Expressjs.
 - `npm run analyze-deploy` - Bundle analysis of tree shaken bundle. kind of opaque, but truest to reality.
 - `yarn upgrade-interactive` - Upgrade only what you want to.
 
-## Meta Tags
+## Build Scripts Explained
+- `npm run deploy` or `npm run serverLocal` are idential, except deploy pushes to github, and serverLocal runs the local server on port 8000.
+	- first it runs `prep`
+		- first it runs `ng build prod --build-optimizer` to build the frontend production app.
+		- second it runs `ng build --prod --app 1 --output-hashing none --build-optimizer` to build the server Aot Factory: `AppServerModuleNgFactory`
+		- third it runs `localWebpackForServer` which bundles the backend server from the `webpack.config.js` settings file into a single file: `server.js` and places it into your `ng-iso-deploy` folder.
+	- second it runs `copy-frontend-to-deploy-folder` which does just as it is named.
+	- third it pushes the deploy folder to github with `push-dist-to-github`. You may want to have a more robust commit message than what I am currently using: `"auto generated commit"`
 
-```
-import { Component } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
-
-@Component({
-  selector: 'my-some-component',
-  template: '<h3>Some Component</h3>'
-})
-
-export class SomeComponent {
-    constructor(meta: Meta, title: Title) {
-	    title.setTitle('ng-iso - Isomorphic Angular');
-
-	    const author = {name: 'author', content: 'Ereck Gordon'};
-	    const keywords = {name: 'keywords', content: 'angular, universal, angular-cli, PWA, expressjs'};
-	    const description = { name: 'description', content: 'This is a page. It is neat.' };
-
-	    const tagsToCheck:any[] = [author, keywords, description]
-	    const unfilteredTags = meta.getTags('name');
-	    tagsToCheck.forEach(tag => {	    	
-	    	const filteredTag = unfilteredTags.filter(unfilteredTag => unfilteredTag.name === tag.name);
-	    	filteredTag.length > 0 ? meta.updateTag({name: filteredTag[0].name, content: tag.content }) : meta.addTag(tag);
-	    });
-    }	
-}
-```
 
 creating deployment on digital ocean server:
 

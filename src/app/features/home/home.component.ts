@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { SEOService } from '../../shared/seo.service';
 
 import 'rxjs/add/operator/take';
 
@@ -8,8 +9,14 @@ import 'rxjs/add/operator/take';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+
+	keywords: string = 'angular, universal, angular-cli, PWA, expressjs';
+	description: string = 'ngiso: Angular Isomorphic. It is a Progressive Web App (PWA) built with Angular Universal on Expressjs.';
   
-    constructor(private http: HttpClient) {}
+    constructor(public seoService:SEOService, private http: HttpClient) {
+    	this.seoService.setPageTitle('igiso - Angular Isomorphic');
+    	this.seoService.setKeywordsAndDescription(this.keywords, this.description);
+    }
 
     ngOnInit() {}
 
